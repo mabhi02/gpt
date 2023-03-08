@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Clipboard",
+  "version": "1.0",
+  "description": "Automatically generates responses to text in clipboard using ChatGPT API.",
+  "permissions": ["clipboardWrite", "clipboardRead", "storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
